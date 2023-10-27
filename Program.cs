@@ -4,13 +4,13 @@ Console.WriteLine();
 
 
 
-//Services.CreateEmployee(Employee.AddNew());
+//Services.CreateEmployee(Employee.AddNewEmployee());
 
 
-var list = Services.GetAll();
+var list = Services.GetAllLikePremiumUser();
 foreach (var item in list)
 {
-    Console.WriteLine($"{item.Id} {item.Name} {item.Login} {item.Email} {item.CreatedDate} {item.Status}");
+    Console.WriteLine($"{item.Id} {item.Name} {item.Email} {item.CreatedDate} {item.Status}");
 }
 
 

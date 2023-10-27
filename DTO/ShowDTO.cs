@@ -2,15 +2,16 @@
 
 namespace Class_Project.DTO
 {
-    public class CreateDTO
+    public class ShowDTO
     {
+        public int Id { get; set; }
         public string Name { get; set; }
         public string Surname { get; set; }
         public string Email { get; set; }
-        public string Login { get; set; }
-        public string Password { get; set; }
         public Status_Enum Status { get; set; }
         public Role_Enum Role { get; set; }
-
+        public string? CreatedDate { get; set; }
+        public string? ModifyDate { get; set; }
+        public string? DeletedDate { get; set; }
     }
 }

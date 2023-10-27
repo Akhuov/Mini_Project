@@ -1,4 +1,6 @@
-﻿namespace Class_Project
+﻿using Class_Project.DTO;
+
+namespace Class_Project
 {
     public class Employee: IEmployee
     {
@@ -28,9 +30,10 @@
             Recruiter
         }
 
-        public static Employee AddNew()
+
+        public static CreateDTO AddNewEmployee()
         {
-            return new Employee()
+            return new CreateDTO()
             {
                 Name = "Xasan",
                 Surname = "Billolov",
@@ -38,10 +41,7 @@
                 Login = "Vdsaw",
                 Password = "Qdsr443",
                 Status = Status_Enum.Created,
-                Role = Role_Enum.Cleaner,
-                CreatedDate = DateTime.Now.ToString("dd.MM.yy"),
-                ModifyDate = null,
-                DeletedDate = null,
+                Role = Role_Enum.Cleaner
            };
         }
 
