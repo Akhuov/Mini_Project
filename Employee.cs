@@ -44,7 +44,18 @@ namespace Class_Project
                 Role = Role_Enum.Cleaner
            };
         }
-
+        public static UpdateDTO UpdateEmployee()
+        {
+            return new UpdateDTO()
+            {
+                Name = "Qaxxor",
+                Surname = "Pulatov",
+                Email = "hjfgjlskhjksjvfh@gmail.com",
+                Login = "RERERER",
+                Password= "Password",
+                Role = Role_Enum.Programmer,
+            };
+        }
 
     }
 }
