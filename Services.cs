@@ -142,8 +142,7 @@ namespace Class_Project
                 try
                 {
                     connect.Open();
-                    string insertQuery = "";
-                    insertQuery += @$"Insert into Employees(Name,Surname,Email,Login,Password,Status,Role,CreatedDate)
+                    string insertQuery = @$"Insert into Employees(Name,Surname,Email,Login,Password,Status,Role,CreatedDate)
                                         Values('{employee.Name}'
                                         ,'{employee.Surname}'
                                         ,'{employee.Email}'
@@ -152,6 +151,7 @@ namespace Class_Project
                                         ,{(int)employee.Status}
                                         ,{(int)employee.Role}
                                         ,'{DateTime.Now.ToString("dd.MM.yy")}');";
+                    
 
                     SqlCommand cmd = new SqlCommand(insertQuery, connect);
                     cmd.ExecuteNonQuery();
